@@ -77,13 +77,16 @@ export default {
                 title: 'Home',
                 route: '/tasks'
               },
-              
+              {
+                icon: 'dashboard',
+                title: 'Dashboard',
+                route: '/dash'
+              },
               {
                 icon: 'person_pin',
                 title: 'MyCabinet',
                 route: '/'
               },
-              
               {
                 icon: 'exit_to_app',
                 title: 'Log out',

@@ -16,7 +16,7 @@
                   </v-card-text>
                   <v-card-actions>
                      <v-btn round class="primary" color="white" flat>Click</v-btn>
-                     <v-btn round class="warning" color="purple" flat>
+                     <v-btn round :to="{name:'instagram'}" class="warning" color="purple" flat>
                         <v-icon>close</v-icon>
                      </v-btn>
                   </v-card-actions>

@@ -1,20 +1,20 @@
 <template>
-    <v-container justify-space-between>
+    <v-container>
         <v-layout row wrap>
-            <v-flex xs12 sm10 md3 offset-sm-1>
-                <sidebar></sidebar>
+            <v-flex xs12 sm10 md12 offset-sm-1>
+               <navmenu></navmenu>
+               <router-view></router-view>
             </v-flex>
-            <v-flex xs12 sm12 md8>
-                <!-- <task-list></task-list> -->
-                <v-container fluid mb-4 style="margin-top:-3rem;">
-                    <router-view></router-view>
+            <v-flex xs12 sm10 md12 offset-sm-1>
+                <v-container>
+                    
                 </v-container>
             </v-flex>
         </v-layout>
     </v-container>
 </template>
 <script>
-  import TaskList from '../components/TaskList'
+  import navmenu from './NavMenu'
   import Sidebar from './Sidebar'
 
     export default {
@@ -25,7 +25,8 @@
         },
         components: {
             //  TaskList,
-            Sidebar
+            Sidebar,
+            navmenu
             
         }
     }

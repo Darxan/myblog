@@ -3,15 +3,15 @@
   <v-footer
     dark
     height="auto"
-    :fixed="true"
     app
+    absolute
+    :fixed="false"
   >
     <v-card
       flat
       tile
       class="indigo lighten-1 white--text text-xs-center"
       style="width: 100%;"
-
     >
       <v-card-text>
         <v-btn

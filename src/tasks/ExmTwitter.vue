@@ -1,12 +1,12 @@
 <template>
-	<div class="container-fluid list">
+	<div class="container list">
 		<h1>Twitter</h1>
 	</div>
 	
 </template>
 <script>
 
-import ProductService from '../ProductService.js';
+
 export default {
 	data(){
 		return {
@@ -18,7 +18,7 @@ export default {
 	computed:{
 		products(){
 			// return this.$store.state.products
-			return this.$store.getters.getProducts;
+			// return this.$store.getters.getProducts;
 		}
 	},
 	

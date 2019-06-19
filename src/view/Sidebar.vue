@@ -1,7 +1,8 @@
 <template>
-   <v-container fixed absolute temporary mb-5 dense style="margin-top:-3rem;">
+   <v-container :fixed="true" temporary mb-5
+               >
       <v-layout>
-         <v-card>
+         <v-card dense color="default">
             <v-list >
                <v-list-tile v-for="item in items" :key="item.text" :to="item.route">
                   <v-list-tile-action>
@@ -15,12 +16,7 @@
                </v-list-tile>
                <v-subheader class="mt-3 grey--text text--darken-1">YouTube</v-subheader>
                <v-list>
-                  <v-list-tile v-for="item in items2" :key="item.text" avatar>
-                     <v-list-tile-avatar>
-                        <img :src="`https://randomuser.me/api/portraits/men/${item.picture}.jpg`" alt="">
-                     </v-list-tile-avatar>
-                     <v-list-tile-title v-text="item.text"></v-list-tile-title>
-                  </v-list-tile>
+                
                </v-list>
                <v-list-tile class="mt-3">
                   <v-list-tile-action>
@@ -47,7 +43,7 @@
             items: [{
                   icon: 'fab fa-instagram',
                   text: 'Zarabotat',
-                  route: '/instag'
+                  route: '/tasks'
                },
                {
                   icon: 'subscriptions',
@@ -65,28 +61,8 @@
                   icon: 'watch_later',
                   text: 'Watch Later'
                }
-            ],
-            items2: [{
-                  picture: 28,
-                  text: 'Joseph'
-               },
-               {
-                  picture: 38,
-                  text: 'Apple'
-               },
-               {
-                  picture: 48,
-                  text: 'Xbox Ahoy'
-               },
-               {
-                  picture: 58,
-                  text: 'Nokia'
-               },
-               {
-                  picture: 78,
-                  text: 'MKBHD'
-               }
             ]
+            
          }
       },
       props: {
