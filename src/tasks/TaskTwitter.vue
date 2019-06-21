@@ -1,9 +1,9 @@
 <template>
 	<div id="instagram">
-	   <v-container fluid grid-list-md thema--black>
+	 <v-container fluid grid-list-md thema--black>
         <v-layout row wrap justify-space-between>
 			  <v-flex xs12 md12 sm10 justify-space-around>
-					<v-toolbar dense color="purple">
+					<v-toolbar dense color="purple" >
 						<v-toolbar-items class="hidden-sm-and-down" justify-space-around >
 							<v-btn dark class="danger" color="white--text" flat>Like</v-btn>
 							<v-btn dark color="white--text" flat>DisLike</v-btn>
@@ -11,12 +11,12 @@
 							<v-btn dark color="white--text" flat>Re-Twit</v-btn>
 						</v-toolbar-items>
 					</v-toolbar>
-			  </v-flex>
+			   </v-flex>
             <v-flex v-for="task in tasks" :key="task.id" xs12 sm10 md4 offset-sm-1>
                 <task-item :task="task"></task-item>
             </v-flex>
         </v-layout>
-		</v-container>
+    </v-container>
 	</div>
 </template>
 <script>
@@ -29,16 +29,11 @@ export default {
 	},
 	computed:{
 		tasks() {
-				return this.$store.getters.getYoutube
+				return this.$store.getters.getTwitter
 		}
 	},
 	components:{
 		TaskItem
-	},
-	created(){
-		// this.products = ProductService.products;
-		// this.$store.commit('loadProducts',ProductService.products)
-		// this.$store.dispatch('loadProducts', ProductService.instagram)
 	}
 
 }	

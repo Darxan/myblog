@@ -1,31 +1,31 @@
   import TaskInstagram  from './tasks/TaskInstagram.vue';
   import TaskYoutube  from './tasks/TaskYoutube.vue';
-  import ExmTwitter  from './tasks/ExmTwitter.vue';
-	// import ExmVk  from './tasks/ExmVk.vue';
+  import TaskTwitter  from './tasks/TaskTwitter.vue';
+  import TaskVkontakte  from './tasks/TaskVkontakte.vue';
+  import TaskFacebook  from './tasks/TaskFacebook.vue';
   import Signup from './view/Signup.vue';
-	import Login from './view/Login.vue';
-	import AppDashboard from './view/AppDashboard.vue';
+  import Login from './view/Login.vue';
+  import AppDashboard from './view/AppDashboard.vue';
   import Tasks  from './view/Tasks.vue';
-	import Task  from './view/Task.vue'
+  import Task  from './view/Task.vue'
 
 
 
   export const routes = [
-  
-    {
-  		path:'/signup',
-  		component:Signup,
-  	  name:'signup'
+   { 
+     path:'/signup',
+     component:Signup,
+     name:'signup' 
     },
-    {
-  		path: '/login',
-  		component: Login,
-  		name: 'login'
-		},
-    {
-  		path: '/dash',
-  		component: AppDashboard,
-			name: 'dashboard',
+   {
+     path: '/login',
+     component: Login,
+     name: 'login'
+    },
+   {
+    path: '/dash',
+    component: AppDashboard,
+		name: 'dashboard',
 			children: [
 					{
 						path: '/tasks',
@@ -33,34 +33,39 @@
 						name: 'tasks',
 						children: [
 							{
-									path: "/instag",
-									name: "instagram",
-									component: TaskInstagram
+								path: "/instag",
+								name: "instagram",
+								component: TaskInstagram
 							},
 							{
 								path: "/yotube",
 								name: "instagram",
 								component: TaskYoutube
-						},
+							},
+							{
+								path: "/facebook",
+								name: "facebook",
+								component: TaskFacebook
+							},
+							{
+								path: "/vk",
+								name: "vkontakte",
+								component: TaskVkontakte
+							},
+							{
+								path: "/twitter",
+								name: "twitter",
+								component: TaskTwitter
+							},
 						]
 					},
 				]
-		},
-		
-   
+   },
     {
       path: '/task/:id',
       component: Task,
       props: true,
       name: 'task'
     },
-    {
-      path: '/twitter',
-      component: ExmTwitter,
-      name: 'twitter'
-    },
-  	{
-  		path: '*',
-  		component: ExmTwitter
-  	}
+    { path: '*', component: AppDashboard }
   ]
