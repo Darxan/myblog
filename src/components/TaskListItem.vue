@@ -3,9 +3,10 @@
       <v-card slot-scope="{ hover }" 
                :class="`elevation-${hover ? 12 : 2}`" 
                class="mx-auto"
-               v-if="seen">
+               v-if="seen"
+               >
          <v-container fluid>
-            <v-layout xs8 md1 sm4 offset-xs-2>
+            <v-layout xs8 md3 sm4 offset-xs-2>
                <v-flex justify-center id="instagram">
                   <v-avatar>
                      <img :src="task.avatar" alt="">

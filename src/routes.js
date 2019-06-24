@@ -8,6 +8,8 @@
   import AppDashboard from './view/AppDashboard.vue';
   import Tasks  from './view/Tasks.vue';
   import Task  from './view/Task.vue'
+  import TaskAdd  from './tasks/TaskAdd.vue'
+  import AddNewTasksFaAll  from './tasks/newtaskadd/AddNewTasksFaAll.vue'
 
 
 
@@ -38,7 +40,7 @@
 								component: TaskInstagram
 							},
 							{
-								path: "/yotube",
+								path: "/youtube",
 								name: "instagram",
 								component: TaskYoutube
 							},
@@ -57,8 +59,20 @@
 								name: "twitter",
 								component: TaskTwitter
 							},
+							
 						]
 					},
+					{
+						path: "/add",
+						name: "taskadd",
+						component: TaskAdd,
+								
+					},
+					{
+						path: '/facebook/all',
+						name: 'facebookall',
+						component: AddNewTasksFaAll
+					}
 				]
    },
     {

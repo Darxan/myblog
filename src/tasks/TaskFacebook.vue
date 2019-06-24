@@ -3,7 +3,7 @@
 	 <v-container fluid grid-list-md thema--black>
         <v-layout row wrap justify-space-between>
 			  <v-flex xs12 md12 sm10 justify-space-around>
-					<v-toolbar dense color="purple" >
+					<v-toolbar dense color="midnight blue" >
 						<v-toolbar-items class="hidden-sm-and-down" justify-space-around >
 							<v-btn dark class="danger" color="white--text" flat>Like</v-btn>
 							<v-btn dark color="white--text" flat>DisLike</v-btn>

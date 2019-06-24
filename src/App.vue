@@ -2,7 +2,7 @@
   <v-app class="application theme--black">
     <app-header>
     </app-header>
-            <v-content dark>
+            <v-content dark style="background:#c4dcc791;">
                <router-view></router-view>
             </v-content>
     <app-footer></app-footer> 
